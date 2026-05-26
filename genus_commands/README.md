@@ -1,27 +1,12 @@
 # Cadence Genus Command Reference
 
-Useful Tcl command patterns for Cadence Genus synthesis debug, collection handling, pin checks, and clock tracing.
+Useful manual Tcl command patterns for Cadence Genus synthesis debug, collection handling, pin checks, and clock tracing.
 
 ## Folder Contents
 
 | File | Purpose |
 | --- | --- |
-| `check_pin_clock_basic.tcl` | Editable script to check clock information for one or more pins. |
-
-## Source the Script
-
-From the repository root:
-
-```tcl
-source genus_commands/check_pin_clock_basic.tcl
-```
-
-If you copied both files into one Genus script folder:
-
-```tcl
-source eda_collection_utils.tcl
-source check_pin_clock_basic.tcl
-```
+| `README.md` | Manual Genus command examples for copy/paste reference. |
 
 ## Check Clock on a Pin
 
@@ -55,28 +40,24 @@ core/w_mem_inst_w_mem_reg[3][25]
 
 Tcl treats `[3]` and `[25]` as command substitutions when they are not protected.
 
-## Reusable Script Flow
+## Try Multiple Pins Manually
 
-Edit this block inside `check_pin_clock_basic.tcl`:
-
-```tcl
-set pin_checks {
-    {core/w_mem_inst_w_mem_reg[3][25] *CK*}
-    {core/w_mem_inst_w_mem_reg[3][26] *CK*}
-    {top/u_cpu/u_reg0 *CLK*}
-}
-```
-
-Each entry means:
-
-```text
-{instance_name pin_name_pattern}
-```
-
-Then rerun:
+Update the instance name in each command and run them one by one:
 
 ```tcl
-source genus_commands/check_pin_clock_basic.tcl
+get_db [get_pins -of_objects [get_cells {core/w_mem_inst_w_mem_reg[3][25]}] -filter "full_name=~*CK*"] .clocks
+get_db [get_pins -of_objects [get_cells {core/w_mem_inst_w_mem_reg[3][26]}] -filter "full_name=~*CK*"] .clocks
+get_db [get_pins -of_objects [get_cells {top/u_cpu/u_reg0}] -filter "full_name=~*CLK*"] .clocks
+```
+
+For learning, it is better to first store the objects in variables:
+
+```tcl
+set inst {core/w_mem_inst_w_mem_reg[3][25]}
+set cell [get_cells $inst]
+set pin  [get_pins -of_objects $cell -filter "full_name=~*CK*"]
+
+get_db $pin .clocks
 ```
 
 ## Basic Object Queries
@@ -189,4 +170,3 @@ get_db $pin .clocks
 get_db $pin .net
 report_timing -to $pin
 ```
-
