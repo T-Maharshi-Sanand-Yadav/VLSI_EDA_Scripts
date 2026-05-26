@@ -7,6 +7,7 @@ Useful manual Tcl command patterns for Cadence Genus synthesis debug, collection
 | File | Purpose |
 | --- | --- |
 | `README.md` | Manual Genus command examples for copy/paste reference. |
+| `check_pin_clock_basic.tcl` | Commented manual command note for checking the clock on a selected pin. |
 
 ## Check Clock on a Pin
 
