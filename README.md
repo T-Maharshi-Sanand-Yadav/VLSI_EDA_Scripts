@@ -1,5 +1,10 @@
 # VLSI EDA Scripts
 
+[![Tcl](https://img.shields.io/badge/Language-Tcl-blue.svg)](https://www.tcl.tk/)
+[![VLSI](https://img.shields.io/badge/Domain-VLSI%20EDA-orange.svg)](#)
+[![YouTube](https://img.shields.io/badge/YouTube-Maharshi%20Sanand%20Yadav-red.svg)](https://www.youtube.com/@maharshisanandyadav)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-T.%20Maharshi%20Sanand%20Yadav-blue.svg)](https://www.linkedin.com/in/t-maharshi-sanand-yadav/)
+
 Reusable Tcl helpers for VLSI, ASIC, FPGA, synthesis, STA, PnR, and implementation flows.
 
 This repository is a growing collection of practical EDA scripts designed for engineers who work inside tool shells such as Synopsys PrimeTime/DC/ICC2, Cadence Genus/Innovus, and Xilinx Vivado.
@@ -176,6 +181,17 @@ Good additions include:
 - Tool-portable reporting helpers
 - Clear examples and tested command snippets
 - Scripts for synthesis, STA, PnR, signoff, and debug workflows
+
+## Connect and Learn
+
+Follow my VLSI learning content, tutorials, and updates here:
+
+| Platform | Link |
+| --- | --- |
+| YouTube | [Maharshi Sanand Yadav T](https://www.youtube.com/@maharshisanandyadav) |
+| YouTube Membership | [Join the TMSY community](https://www.youtube.com/@maharshisanandyadav/join) |
+| LinkedIn | [T. Maharshi Sanand Yadav](https://www.linkedin.com/in/t-maharshi-sanand-yadav/) |
+| Udemy | [Digital System Design using Verilog HDL](https://www.udemy.com/course/digital-system-design-using-verilog-hdl/) |
 
 ## License
 
