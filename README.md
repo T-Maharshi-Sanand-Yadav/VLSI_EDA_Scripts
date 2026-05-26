@@ -35,6 +35,24 @@ Current Genus reference:
 | File | Purpose |
 | --- | --- |
 | `genus_commands/README.md` | Reference notes for Genus `get_db`, pin attributes, clock checks, timing checks, and redirect usage. |
+| `genus_commands/check_pin_clock_basic.tcl` | Copy/paste Genus command note for checking `.clocks` and related pin/net attributes. |
+
+Quick Genus clock-pin check:
+
+```tcl
+get_db [get_pins -of_objects [get_cells {core/w_mem_inst_w_mem_reg[3][25]}] -filter "full_name=~*CK*"] .clocks
+```
+
+Useful related attributes:
+
+```tcl
+get_db $pin .?
+get_db $pin .name
+get_db $pin .full_name
+get_db $pin .direction
+get_db $pin .clocks
+get_db $pin .net
+```
 
 ## Supported Tool Styles
 
