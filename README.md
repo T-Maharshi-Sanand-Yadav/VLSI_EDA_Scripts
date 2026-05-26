@@ -21,10 +21,6 @@ EDA tools often return objects as special collections instead of normal Tcl list
 | --- | --- |
 | `eda_collection_utils.tcl` | Universal helpers for printing, counting, exporting, and converting EDA collections or Tcl lists. |
 | `genus_commands/` | Cadence Genus manual command reference. |
-| `script_to_extract_all_man_pages_command_wise_genus/` | Local helper files for extracting Genus command help from an installed tool environment. |
-| `script_to_extract_all_man_pages_command_wise_tempus/` | Local helper files for extracting Tempus command help from an installed tool environment. |
-
-Note: generated `man_pages/` outputs are intentionally ignored and not published, because they may contain vendor manual text from installed EDA tools.
 
 ## Genus Command Reference
 

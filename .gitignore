@@ -1,6 +1,4 @@
-# Generated EDA tool manual dumps.
-# These are created locally from installed Cadence tools and should not be
-# published in this public repository.
-script_to_extract_all_man_pages_command_wise_genus/man_pages/
-script_to_extract_all_man_pages_command_wise_tempus/man_pages/
-
+# Local EDA tool manual extraction helpers and generated dumps.
+# Keep these private because they may reference local/vendor tool content.
+script_to_extract_all_man_pages_command_wise_genus/
+script_to_extract_all_man_pages_command_wise_tempus/
