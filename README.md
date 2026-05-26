@@ -20,6 +20,22 @@ EDA tools often return objects as special collections instead of normal Tcl list
 | File | Purpose |
 | --- | --- |
 | `eda_collection_utils.tcl` | Universal helpers for printing, counting, exporting, and converting EDA collections or Tcl lists. |
+| `genus_commands/` | Cadence Genus command reference and reusable debug scripts. |
+
+## Genus Command Reference
+
+Cadence Genus-specific examples are collected here:
+
+```text
+genus_commands/
+```
+
+Current Genus utilities:
+
+| File | Purpose |
+| --- | --- |
+| `genus_commands/README.md` | Reference notes for Genus `get_db`, pin attributes, clock checks, timing checks, and redirect usage. |
+| `genus_commands/check_pin_clock_basic.tcl` | Editable script to check clock information for one or more pins. |
 
 ## Supported Tool Styles
 
