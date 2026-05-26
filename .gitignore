@@ -2,3 +2,6 @@
 # Keep these private because they may reference local/vendor tool content.
 script_to_extract_all_man_pages_command_wise_genus/
 script_to_extract_all_man_pages_command_wise_tempus/
+
+# Generated report output when scripts are run from this repository.
+reports/

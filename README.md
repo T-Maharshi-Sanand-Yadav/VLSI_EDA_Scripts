@@ -21,6 +21,7 @@ EDA tools often return objects as special collections instead of normal Tcl list
 | --- | --- |
 | `eda_collection_utils.tcl` | Universal helpers for printing, counting, exporting, and converting EDA collections or Tcl lists. |
 | `genus_commands/` | Cadence Genus manual command reference. |
+| `genus_scripts/` | Cadence Genus Tcl scripts for generating reports and automating common debug tasks. |
 
 ## Genus Command Reference
 
@@ -52,6 +53,26 @@ get_db $pin .full_name
 get_db $pin .direction
 get_db $pin .clocks
 get_db $pin .net
+```
+
+## Genus Scripts
+
+Reusable Cadence Genus scripts are collected here:
+
+```text
+genus_scripts/
+```
+
+Current Genus scripts:
+
+| File | Purpose |
+| --- | --- |
+| `genus_scripts/dump_report_timing_reports.tcl` | Dumps `report_timing` outputs into a `reports/` directory under the current working directory. |
+
+Run from inside Genus:
+
+```tcl
+source genus_scripts/dump_report_timing_reports.tcl
 ```
 
 ## Supported Tool Styles
